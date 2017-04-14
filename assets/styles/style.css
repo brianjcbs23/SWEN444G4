@@ -5,9 +5,15 @@
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
 
-.header {
-	padding: 100px;
-	background-color: black
+.subscriptions {
+	height: 300px;
+	width: 15%;
+	background-color: black;
+	float: left;
+}
+.container {
+	width: 100px;
+	margin-left: 15%
 }
 .ui-draggable-handle {
 	-ms-touch-action: none;
