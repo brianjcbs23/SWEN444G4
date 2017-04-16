@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+    $( "#selectable" ).selectable();
+    document.getElementById("returnHome").onclick = function () {
+        location.href = "feed";
+    };
+    document.getElementById("resRec1").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("resRec2").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("resRec3").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("resRec4").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("resComment1").onclick = function () {
+        location.href = "resolveComment";
+    };
+    document.getElementById("resComment2").onclick = function () {
+        location.href = "resolveComment";
+    };
+    document.getElementById("log1").onclick = function () {
+        location.href = "resolveComment";
+    };
+    document.getElementById("log2").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("log3").onclick = function () {
+        location.href = "resolveComment";
+    };
+    document.getElementById("log4").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("log5").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+  } );
+  </script>
+<style>
+  #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #selectable li { margin: 0px; padding: 0em; font-size: 1.4em; height: 75px; }
+  
+</style>
+
+</head>
+
+<body>
+
+  <div class ="header" style="background-color:#E9E9E9; position:relative">
+      <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:50px; top:50px; border-radius: 50%" width="100" height="100">
+      <label style="position:absolute; left:50px; top:150px">Moderator User Name</label>
+      <button id="returnHome" class="ui-button ui-widget ui-corner-all" style="position:absolute; left:250px; top:80px;">Homepage</button>
+      <input style="position:absolute; right:130px; top:75px; height:50px; font-size:14pt;" size="50">
+      <button class="ui-button ui-widget ui-corner-all" style="position:absolute; right:50px; top:75px; height:55px; width:75px" >
+        <img src="/images/mag.png" /></button>
+  </div>
+
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Recipes</a></li>
+  	  <li><a href="#tabs-2">Comments</a></li>
+      <li style="float: right"><a href="#tabs-3">History</a></li>
+    </ul>
+
+    <div id="tabs-1">
+
+      <div id="resRec1" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+        <img src="/images/catfood.jpg" style="position:absolute; left:10px; top:10px;" width="100" height="100">
+
+        <label style="position:absolute; left:120px; top:40px">Why everything I don't like is horrible</label>
+        <label style="position:absolute; left:120px; bottom:40px">KeyboardWarrior99</label>
+
+        <label style="position:absolute; right:100px; top:40px">Reported:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+      <div id="resRec2" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+         <img src="/images/catfood.jpg" style="position:absolute; left:10px; top:10px;" width="100" height="100">
+
+        <label style="position:absolute; left:120px; top:40px">Why everything I don't like is horrible</label>
+        <label style="position:absolute; left:120px; bottom:40px">KeyboardWarrior99</label>
+
+        <label style="position:absolute; right:100px; top:40px">Reported:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+      <div id="resRec3" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+         
+
+        <img src="/images/catfood.jpg" style="position:absolute; left:10px; top:10px;" width="100" height="100">
+        <label style="position:absolute; left:120px; top:40px">Why everything I don't like is horrible</label>
+        <label style="position:absolute; left:120px; bottom:40px">KeyboardWarrior99</label>
+
+        <label style="position:absolute; right:100px; top:40px">Reported:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+      <div id="resRec4" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+         <img src="/images/catfood.jpg" style="position:absolute; left:10px; top:10px;" width="100" height="100">
+
+        <label style="position:absolute; left:120px; top:40px">Why everything I don't like is horrible</label>
+        <label style="position:absolute; left:120px; bottom:40px">KeyboardWarrior99</label>
+
+        <label style="position:absolute; right:100px; top:40px">Reported:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+    </div>
+
+    <div id="tabs-2">
+
+      <div id = "resComment1" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:10px; top:10px; border-radius: 50%" width="100" height="100">
+
+        <label style="position:absolute; left:120px; bottom:55px">KeyboardWarrior99</label>
+        <label style="position:absolute; left:500px; bottom:55px">"offensive stuff"</label>
+
+        <label style="position:absolute; right:100px; top:40px">Reported:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+       <div id = "resComment2" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:10px; top:10px; border-radius: 50%" width="100" height="100">
+
+        <label style="position:absolute; left:120px; bottom:55px">KeyboardWarrior99</label>
+        <label style="position:absolute; left:500px; bottom:55px">"offensive stuff"</label>
+
+        <label style="position:absolute; right:100px; top:40px">Reported:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+    </div>
+
+    <div id="tabs-3">
+
+       <div id="log1" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:10px; top:10px; border-radius: 50%" width="100" height="100">
+
+        <label style="position:absolute; left:120px; bottom:55px">KeyboardWarrior99</label>
+        <label style="position:absolute; left:500px; bottom:55px">"offensive stuff"</label>
+
+        <label style="position:absolute; right:100px; top:40px">Resolved:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-21-17</label>
+
+        <label style="position:absolute; right:250px; top:40px">Reported:</label>
+        <label style="position:absolute; right:250px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+      <div id="log2" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+         <img src="/images/catfood.jpg" style="position:absolute; left:10px; top:10px;" width="100" height="100">
+
+        <label style="position:absolute; left:120px; top:40px">Why everything I don't like is horrible</label>
+        <label style="position:absolute; left:120px; bottom:40px">KeyboardWarrior99</label>
+
+        <label style="position:absolute; right:100px; top:40px">Resolved:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-21-17</label>
+
+        <label style="position:absolute; right:250px; top:40px">Reported:</label>
+        <label style="position:absolute; right:250px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+      <div id="log3" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+      <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:10px; top:10px; border-radius: 50%" width="100" height="100">
+
+        <label style="position:absolute; left:120px; bottom:55px">KeyboardWarrior99</label>
+        <label style="position:absolute; left:500px; bottom:55px">"offensive stuff"</label>
+
+        <label style="position:absolute; right:100px; top:40px">Resolved:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-21-17</label>
+
+        <label style="position:absolute; right:250px; top:40px">Reported:</label>
+        <label style="position:absolute; right:250px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+      <div id="log4" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+         <img src="/images/catfood.jpg" style="position:absolute; left:10px; top:10px;" width="100" height="100">
+
+        <label style="position:absolute; left:120px; top:40px">Why everything I don't like is horrible</label>
+        <label style="position:absolute; left:120px; bottom:40px">KeyboardWarrior99</label>
+
+        <label style="position:absolute; right:100px; top:40px">Resolved:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-21-17</label>
+
+        <label style="position:absolute; right:250px; top:40px">Reported:</label>
+        <label style="position:absolute; right:250px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+      <div id="log5" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
+
+         <img src="/images/catfood.jpg" style="position:absolute; left:10px; top:10px;" width="100" height="100">
+
+        <label style="position:absolute; left:120px; top:40px">Why everything I don't like is horrible</label>
+        <label style="position:absolute; left:120px; bottom:40px">KeyboardWarrior99</label>
+
+        <label style="position:absolute; right:100px; top:40px">Resolved:</label>
+        <label style="position:absolute; right:100px; bottom:40px">3-21-17</label>
+
+        <label style="position:absolute; right:250px; top:40px">Reported:</label>
+        <label style="position:absolute; right:250px; bottom:40px">3-20-17</label>
+          
+      </div>
+
+      <br>
+
+    </div>
+
+  </div>
+
+  
+
+</body>
+</html>

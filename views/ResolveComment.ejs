@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+    $( "#selectable" ).selectable();
+    document.getElementById("exit").onclick = function () {
+        location.href = "moderatorDashboard";
+    };
+    document.getElementById("ignore").onclick = function () {
+        location.href = "moderatorDashboard";
+    };
+    document.getElementById("remove").onclick = function () {
+        location.href = "moderatorDashboard";
+    };
+    document.getElementById("tagConfirm").onclick = function () {
+
+      var tagVal=document.getElementById("tag").value;
+      if (tagVal.length >= 1)
+      {
+        location.href = "moderatorDashboard";
+      }
+        
+    };
+  } );
+  </script>
+<style>
+  
+  
+</style>
+
+</head>
+
+<body>
+
+  <div class ="header" style="background-color:#C0D3F2; position:relative">
+      <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:50px; top:50px; border-radius: 50%" width="100" height="100">
+      <label style="position:absolute; left:160px; top:90px">Reported User's Username</label>
+      <button id="exit" class="ui-button ui-widget ui-corner-all" style="position:absolute; Right:50px; top:50px;">Exit</button>
+      
+  </div>
+  
+  <div style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:500px; ">
+
+
+
+    <label id="content" style=" width: 1000px;text-align:center; vertical-align:middle; display:table-cell;">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum quam nec orci consectetur, id fringilla lectus auctor. Mauris maximus sem ac urna fringilla scelerisque. Integer eu diam sollicitudin, luctus velit eget, accumsan ex. Proin non lacus in urna ullamcorper sollicitudin in et dui. Nulla elementum, lacus eleifend porta malesuada, urna nisl posuere velit, sit amet scelerisque nunc magna sed libero. Nulla vel elit eleifend, molestie dui fermentum, vulputate odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In nec nulla dolor. Donec sit amet varius justo. Proin finibus, orci id pulvinar finibus, sem lectus facilisis lorem, nec dapibus est lorem sed felis. Aliquam odio justo, elementum vitae mi in, vestibulum mollis nibh. Sed in dui quis diam tincidunt maximus non sed purus. In at nisl id dolor efficitur rhoncus quis et lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam at odio dapibus, semper velit sit amet, semper augue.
+    </label>
+
+    <button id="ignore" class="ui-button ui-widget ui-corner-all" style="position:absolute; left:50px; bottom:50px;">Ignore</button>
+    <button id="remove" class="ui-button ui-widget ui-corner-all" style="position:absolute; left:150px; bottom:50px;">Remove</button>
+    <button id="tagConfirm" class="ui-button ui-widget ui-corner-all" style="position:absolute; Right:50px; bottom:50px;">Tag</button>
+    <input id="tag" style="position:absolute; right:130px; bottom:50px; height:30px; font-size:14pt;" size="20">
+    <button id="gotoRecipe" class="ui-button ui-widget ui-corner-all" style="position:absolute; bottom:125px; right:50px">Go To Recipe</button>
+
+
+  </div>
+
+</body>
+</html>

@@ -109,6 +109,7 @@
 	-ms-touch-action: none;
 	touch-action: none;
 }
+
 .ui-resizable-disabled .ui-resizable-handle,
 .ui-resizable-autohide .ui-resizable-handle {
 	display: none;
@@ -172,6 +173,13 @@
 .ui-selectable {
 	-ms-touch-action: none;
 	touch-action: none;
+	list-style-type: none; 
+	
+	width: 100%;
+    margin: 0px; 
+    padding: 0em; 
+    font-size: 1em; 
+    height: 50px;
 }
 .ui-selectable-helper {
 	position: absolute;
@@ -920,7 +928,7 @@ body .ui-tooltip {
 	font-weight: bold;
 }
 .ui-widget-header a {
-	color: #333333;
+	color: #e9e9e9;
 }
 
 /* Interaction states
