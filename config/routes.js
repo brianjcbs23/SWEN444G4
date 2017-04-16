@@ -46,6 +46,15 @@ module.exports.routes = {
   },
   'get /feed': {
 	  view: 'feed'
+  },
+  'get /preferences': {
+    view: 'preferences'
+  },
+  'get /search': {
+    view: 'search_form'
+  },
+  'get /profile': {
+    view: 'profile'
   }
 
   /***************************************************************************
