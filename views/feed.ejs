@@ -13,6 +13,43 @@
   <script>
   $( function() {
     $( "#tabs" ).tabs();
+    $( "#selectable" ).selectable();
+    document.getElementById("createRecipe").onclick = function () {
+        location.href = "createRecipe";
+    };
+    document.getElementById("recipe1").onclick = function () {
+        location.href = "recipe1";
+    };
+    document.getElementById("resRec2").onclick = function () {
+        location.href = "recipe2";
+    };
+    document.getElementById("resRec3").onclick = function () {
+        location.href = "recipe3";
+    };
+    document.getElementById("resRec4").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("user1").onclick = function () {
+        location.href = "user1";
+    };
+    document.getElementById("resComment2").onclick = function () {
+        location.href = "resolveComment";
+    };
+    document.getElementById("log1").onclick = function () {
+        location.href = "resolveComment";
+    };
+    document.getElementById("log2").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("log3").onclick = function () {
+        location.href = "resolveComment";
+    };
+    document.getElementById("log4").onclick = function () {
+        location.href = "resolveRecipe";
+    };
+    document.getElementById("log5").onclick = function () {
+        location.href = "resolveRecipe";
+    };
   } );
   </script>
 </head>
@@ -20,8 +57,8 @@
 <div class="container">
  <div class ="header">
 
- <button type="button" class="btn btn-default btn-md">
-  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+ <button type="button" class="btn btn-default btn-md" style="vertical-align: middle; border-radius: 100%">
+  <span class="glyphicon glyphicon-user" aria-hidden="true" style="position:relative; border-radius: 50%; vertical-align: middle"></span>
 </button>
  
  <button id="button" class="ui-button ui-corner-all ui-widget">Create Recipe</button>
@@ -29,7 +66,9 @@
 <div id="wrapper">
   <div id="left">
   <h3>Subscriptions</h3>
-  <panel class="glyphicon glyphicon-user" aria-hidden="true"></panel>
+  <button type="button" class="btn btn-default btn-md">
+  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+</button>
   </div>
   <div id = "right">
     <div id="tabs">
@@ -44,6 +83,14 @@
         <p class="panel">
         <span class="glyphicon glyphicon-cutlery btn-md"></span>
         Fettuccine Alfredo
+        </p>
+        <p class="panel">
+        <span class="glyphicon glyphicon-cutlery btn-md"></span>
+        Chicken Parmesan
+        </p>
+        <p class="panel">
+        <span class="glyphicon glyphicon-cutlery btn-md"></span>
+        Chocolate Chip Cookies
         </p>
       </div>
       <div id="tabs-2">
