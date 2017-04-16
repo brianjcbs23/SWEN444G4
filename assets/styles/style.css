@@ -15,10 +15,19 @@
 	background-color: #E9E9E9;
 	cursor: pointer;
 }
+.recipe{
+	height: 75px;
+}
+.filters{
+	height: 60px;
+}
 .user:hover{
 	background-color: #E9E9E9;
 	cursor: pointer;
 	vertical-align: middle;
+}
+.user{
+	height: 75px;
 }
 #left {
   float:left;
