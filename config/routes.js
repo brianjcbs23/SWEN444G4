@@ -51,7 +51,16 @@ module.exports.routes = {
     view : 'Recipe'
   },
   '/createRecipe' : {
-    view : 'CreateRecipe'
+    view: 'CreateRecipe'
+  },
+  'get /preferences': {
+    view: 'preferences'
+  },
+  'get /search': {
+    view: 'search_form'
+  },
+  'get /profile': {
+    view: 'profile'
   }
 
 
