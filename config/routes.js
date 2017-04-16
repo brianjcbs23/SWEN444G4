@@ -35,6 +35,15 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
+  '/moderatorDashboard': {
+    view: 'ModeratorDashboard'
+  },
+  '/resolveComment': {
+    view: 'ResolveComment'
+  },
+  '/resolveRecipe': {
+    view: 'ResolveRecipe'
+  },
   'get /feed': {
 	  view: 'feed'
   }
