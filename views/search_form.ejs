@@ -1,7 +1,73 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 0px;
+    text-align: justified;
+    padding: 8px;
+}
+</style>
 <dev class="search-page">
     <dev class="title">
-    <h2>Search</h2>
     </dev>
-    <dev class="preferences">
+    <dev class="search">
+        <table>
+            <tr>
+                <td><h2>Advanced Search</h2></td>
+                <td>
+                    <form action="/feed">
+                        <input type="text" size="50" style="height: 15px;">
+                        <a href="/feed"><img src="/images/mag.png" width="15px" height="15px"></a>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Type</h3></td>
+                <td><h3>Cost</h3></td>
+            </tr>
+            <tr>
+                <td><input id="checkBox" type="checkbox"> User</td>
+                <td><input id="checkBox" type="checkbox"> $</td>
+            </tr>
+            <tr>
+                <td><input id="checkBox" type="checkbox"> Recipe</td>
+                <td><input id="checkBox" type="checkbox"> $$</td>
+            </tr>
+            <tr>
+                <td><br></td>
+                <td><input id="checkBox" type="checkbox"> $$$</td>
+            </tr>
+            <tr>
+                <td><h3>Difficulty</h3></td>
+                <td><h3>Time</h3></td>
+            </tr>
+            <tr>
+                <td><input id="checkBox" type="checkbox"> Easy</td>
+                <td><input id="checkBox" type="checkbox"> <15min</td>
+            </tr>
+            <tr>
+                <td><input id="checkBox" type="checkbox"> Medium</td>
+                <td><input id="checkBox" type="checkbox"> 15-30 min</td>
+            </tr>
+            <tr>
+                <td><input id="checkBox" type="checkbox"> Hard</td>
+                <td><input id="checkBox" type="checkbox"> >30 min</td>
+            </tr>
+            <tr>
+                <td><h3>Cuisine</h3></td>
+                <td><h3>Other</h3></td>
+            </tr>
+            <tr>
+                <td><input id="checkBox" type="checkbox"> Italian</td>
+                <td><input id="checkBox" type="checkbox"> Vegitarian</td>
+            </tr>
+            <tr>
+                <td><input id="checkBox" type="checkbox"> Chinese</td>
+                <td><input id="checkBox" type="checkbox"> Vegan</td>
+            </tr>
+        </table>
+        
     </dev>
 </dev>
