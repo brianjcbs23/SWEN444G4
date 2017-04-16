@@ -9,20 +9,15 @@ td, th {
     padding: 8px;
 }
 </style>
-<dev class="search-page">
-    <dev class="title">
-    </dev>
-    <dev class="search">
+<div class="search-page">
+    <div class ="header" style="background-color:#FFFFFF; position:relative">
+      <label style="position:absolute; left:1%; bottom:35%"><h2>Advanced Search</h2></label>
+      <input style="position:absolute; right:30%; top:30%; height:50px; font-size:14pt;" size="50">
+      <button class="ui-button ui-widget ui-corner-all" style="position:absolute; right:24%; top:30%; height:55px; width:75px" >
+        <img src="/images/mag.png" /></button>
+    </div>
+    <div class="search">
         <table>
-            <tr>
-                <td><h2>Advanced Search</h2></td>
-                <td>
-                    <form action="/feed">
-                        <input type="text" size="50" style="height: 15px;">
-                        <a href="/feed"><img src="/images/mag.png" width="15px" height="15px"></a>
-                    </form>
-                </td>
-            </tr>
             <tr>
                 <td><h3>Type</h3></td>
                 <td><h3>Cost</h3></td>
@@ -69,5 +64,5 @@ td, th {
             </tr>
         </table>
         
-    </dev>
-</dev>
+    </div>
+</div>
