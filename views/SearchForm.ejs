@@ -6,15 +6,17 @@ table {
 td, th {
     border: 0px;
     text-align: justified;
-    padding: 8px;
+    padding: 4px;
 }
 </style>
 <div class="search-page">
     <div class ="header" style="background-color:#FFFFFF; position:relative">
       <label style="position:absolute; left:1%; bottom:35%"><h2>Advanced Search</h2></label>
-      <input style="position:absolute; right:30%; top:30%; height:50px; font-size:14pt;" size="50">
-      <button class="ui-button ui-widget ui-corner-all" style="position:absolute; right:24%; top:30%; height:55px; width:75px" >
+      <form action="/feed">
+        <input type="text" style="position:absolute; right:30%; top:30%; height:50px; font-size:14pt;" size="50">
+        <button onclick="window.location.href='/feed'" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:24%; top:30%; height:55px; width:75px">
         <img src="/images/mag.png" /></button>
+    </form>
     </div>
     <div class="search">
         <table>
