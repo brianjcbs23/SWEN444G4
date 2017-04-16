@@ -46,7 +46,14 @@ module.exports.routes = {
   },
   'get /feed': {
 	  view: 'feed'
+  },
+  '/recipe' : {
+    view : 'Recipe'
+  },
+  '/createRecipe' : {
+    view : 'CreateRecipe'
   }
+
 
   /***************************************************************************
   *                                                                          *

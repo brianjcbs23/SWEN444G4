@@ -192,12 +192,12 @@
 .ui-selectable {
 	-ms-touch-action: none;
 	touch-action: none;
-	list-style-type: none; 
-	
+	list-style-type: none;
+
 	width: 100%;
-    margin: 0px; 
-    padding: 0em; 
-    font-size: 1em; 
+    margin: 0px;
+    padding: 0em;
+    font-size: 1em;
     height: 50px;
 }
 .ui-selectable-helper {
