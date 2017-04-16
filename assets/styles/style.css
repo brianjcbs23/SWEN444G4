@@ -10,6 +10,9 @@
 #wrapper {
   display: flex;
 }
+.recipe:hover{
+	background-color: #E9E9E9;
+}
 #left {
   float:left;
   width: 20%;
