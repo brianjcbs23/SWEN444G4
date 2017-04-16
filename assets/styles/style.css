@@ -6,12 +6,19 @@
 
 *{
 	margin: 5px 5px 5px 5px;
+	vertical-align: middle;
 }
 #wrapper {
   display: flex;
 }
 .recipe:hover{
 	background-color: #E9E9E9;
+	cursor: pointer;
+}
+.user:hover{
+	background-color: #E9E9E9;
+	cursor: pointer;
+	vertical-align: middle;
 }
 #left {
   float:left;
