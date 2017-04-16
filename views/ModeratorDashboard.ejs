@@ -13,50 +13,106 @@
   $( function() {
     $( "#tabs" ).tabs();
     $( "#selectable" ).selectable();
+
+    $('#resolveRecipeContent').load('resolveRecipe');
+    $('#resolveCommentContent').load('resolveComment');
+
+    var modalRec = document.getElementById('resolveRecipeModal');
+    var modalCom = document.getElementById('resolveCommentModal');
+    
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  
+  $('.modal').on('shown.bs.modal', function() {
+        $(this).find('iframe').attr('src','http://www.google.com')
+    })  
     document.getElementById("returnHome").onclick = function () {
         location.href = "feed";
     };
     document.getElementById("resRec1").onclick = function () {
-        location.href = "resolveRecipe";
+        modalRec.style.display = "block";
+        
     };
     document.getElementById("resRec2").onclick = function () {
-        location.href = "resolveRecipe";
+        modalRec.style.display = "block";
     };
     document.getElementById("resRec3").onclick = function () {
-        location.href = "resolveRecipe";
+        modalRec.style.display = "block";
     };
     document.getElementById("resRec4").onclick = function () {
-        location.href = "resolveRecipe";
+        modalRec.style.display = "block";
     };
     document.getElementById("resComment1").onclick = function () {
-        location.href = "resolveComment";
+        modalCom.style.display = "block";
     };
     document.getElementById("resComment2").onclick = function () {
-        location.href = "resolveComment";
+        modalCom.style.display = "block";
     };
     document.getElementById("log1").onclick = function () {
-        location.href = "resolveComment";
+        modalCom.style.display = "block";
     };
     document.getElementById("log2").onclick = function () {
-        location.href = "resolveRecipe";
+        modalRec.style.display = "block";
     };
     document.getElementById("log3").onclick = function () {
-        location.href = "resolveComment";
+        modalCom.style.display = "block";
     };
     document.getElementById("log4").onclick = function () {
-        location.href = "resolveRecipe";
+        modalRec.style.display = "block";
     };
     document.getElementById("log5").onclick = function () {
-        location.href = "resolveRecipe";
+        modalRec.style.display = "block";
     };
   } );
   </script>
 <style>
   #feedback { font-size: 1.4em; }
-  #selectable .ui-selecting { background: #FECA40; }
-  #selectable .ui-selected { background: #F39814; color: white; }
-  #selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
-  #selectable li { margin: 0px; padding: 0em; font-size: 1.4em; height: 75px; }
+ .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #F39814;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .modal iframe {
+    width: 100%;
+    height: 100%;
+    }
   
 </style>
 
@@ -66,11 +122,24 @@
 
   <div class ="header" style="background-color:#E9E9E9; position:relative">
       <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:10%; border-radius: 50%" width="100" height="100">
-      <label style="position:absolute; left:1%; bottom:10%">Moderator User Name</label>
       <button id="returnHome" class="ui-button ui-widget ui-corner-all" style="position:absolute; left:15%; top:30%;">Homepage</button>
       <input style="position:absolute; right:6%; top:30%; height:50px; font-size:14pt;" size="50">
       <button class="ui-button ui-widget ui-corner-all" style="position:absolute; right:1%; top:30%; height:55px; width:75px" >
         <img src="/images/mag.png" /></button>
+  </div>
+
+  <div id="resolveCommentModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="resolveCommentContent" class="modal-content"></div>
+
+  </div>
+
+  <div id="resolveRecipeModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="resolveRecipeContent" class="modal-content"></div>
+
   </div>
 
   <div id="tabs">
