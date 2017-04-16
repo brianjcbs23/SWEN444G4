@@ -3,18 +3,22 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-
 td, th {
     border: 0px;
     text-align: justified;
     padding: 4px;
 }
 </style>
-<div class="preference-page">
-    <div class="title">
-    <h2>Preferences</h2>
+<div class="search-page">
+    <div class ="header" style="background-color:#FFFFFF; position:relative">
+      <label style="position:absolute; left:1%; bottom:35%"><h2>Advanced Search</h2></label>
+      <form action="/feed">
+        <input type="text" style="position:absolute; right:30%; top:30%; height:50px; font-size:14pt;" size="50">
+        <button onclick="window.location.href='/feed'" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:24%; top:30%; height:55px; width:75px">
+        <img src="/images/mag.png" /></button>
+    </form>
     </div>
-    <div class="preferences">
+    <div class="search">
         <table>
             <tr>
                 <td><h3>Type</h3></td>
@@ -59,10 +63,6 @@ td, th {
             <tr>
                 <td><input id="checkBox" type="checkbox"> Chinese</td>
                 <td><input id="checkBox" type="checkbox"> Vegan</td>
-            </tr>
-            <tr>
-                <td><br></td>
-                <td><button type="button" onclick="window.location.href='/feed'">Submit</button></td>
             </tr>
         </table>
         

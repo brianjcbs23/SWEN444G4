@@ -57,7 +57,7 @@ module.exports.routes = {
     view: 'preferences'
   },
   'get /search': {
-    view: 'search_form'
+    view: 'SearchForm'
   },
   'get /profile': {
     view: 'profile'
