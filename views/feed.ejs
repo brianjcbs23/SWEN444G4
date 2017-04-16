@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>jQuery UI Tabs - Default functionality</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
@@ -13,44 +17,48 @@
   </script>
 </head>
 <body>
+<div class="container">
  <div class ="header">
 
- <span class="glyphicons glyphicons-user"></span>
-
+ <button type="button" class="btn btn-default btn-md">
+  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+</button>
+ 
  <button id="button" class="ui-button ui-corner-all ui-widget">Create Recipe</button>
  </div>
-<div class="subscriptions">
-Subscriptions
+<div id="wrapper">
+  <div id="left">
+  Subscriptions
+  </div>
+  <div id = "right">
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Radar</a></li>
+    	<li><a href="#tabs-2">Following</a></li>
+        <li><a href="#tabs-3">Favorites</a></li>
+        <li><a href="#tabs-4">Popular</a></li>
+    	<li><a href="#tabs-5">Search</a></li>
+      </ul>
+      <div id="tabs-1">
+        <p>Recipes on your radar go here</p>
+      </div>
+      <div id="tabs-2">
+        <p>These are recipes from people you follow</p>
+      </div>
+      <div id="tabs-3">
+        <p>Favorite recipes are here</p>
+      </div>
+      <div id="tabs-4">
+        <p>Popular recipes are here</p>
+      </div>
+      <div id="tabs-5">
+        <p>Search results are here</p>
+      </div>
+    </div>
+  </div>
 </div>
-<div class = "container">
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Radar</a></li>
-	<li><a href="#tabs-2">Following</a></li>
-    <li><a href="#tabs-3">Favorites</a></li>
-    <li><a href="#tabs-4">Popular</a></li>
-	<li><a href="#tabs-5">Search</a></li>
-  </ul>
-  <div id="tabs-1">
-    <p>Recipes on your radar go here</p>
-  </div>
-  <div id="tabs-2">
-    <p>These are recipes from people you follow</p>
-  </div>
-  <div id="tabs-3">
-    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-  </div>
-  <div id="tabs-4">
-    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-  </div>
-  <div id="tabs-5">
-    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-  </div>
-  </div>
 </div>
+
  
  
 </body>
