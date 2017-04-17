@@ -87,10 +87,14 @@
       width: 350,
       modal: true,
       buttons: {
-        "Create an account": addUser,
-        Cancel: function() {
+        "Save Draft": function() {
           dialog.dialog( "close" );
-        }
+        },
+        "Create Recipe": function() {
+          dialog.dialog( "close" );
+        },
+
+
       },
       close: function() {
         form[ 0 ].reset();
@@ -101,6 +105,7 @@
     form = dialog.find( "form" ).on( "submit", function( event ) {
       event.preventDefault();
       addUser();
+      dialog.close();
     });
  
     $( "#createRecipe" ).button().on( "click", function() {
@@ -161,11 +166,18 @@
  
   <form>
     <fieldset>
-      <label for="name">Name of Recipe</label>
-      <label for="email">Email</label>
-      <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+      <label for="name">Name of Recipe</label><br>
+      <input type="text"><br>
+      <label for="password">Description</label><br>
+      <textarea id="txtArea" rows="3" cols="20"></textarea><br>
+      <label for="password">Ingredients</label><br>
+      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
+      <label for="password">Equipment</label><br>
+      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
+      <label for="password">Directions</label><br>
+      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
+      <label for="password">Description</label><br>
+      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
  
       <!-- Allow form submission with keyboard without duplicating the dialog button -->
       <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
@@ -267,27 +279,7 @@
         </div>
       </div>
     </div>
-    <a data-toggle="modal" href="createRecipe">Open Modal</a>
 
-    <div ui-view="createRecipe" autoscroll="false"></div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>This is a small modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 </div>
 </div>
