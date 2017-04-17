@@ -3,11 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
   <script>
   $( function() {
@@ -20,13 +19,6 @@
     var modalRec = document.getElementById('resolveRecipeModal');
     var modalCom = document.getElementById('resolveCommentModal');
     
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
   
   $('.modal').on('shown.bs.modal', function() {
         $(this).find('iframe').attr('src','http://www.google.com')
@@ -118,7 +110,9 @@
 
 </head>
 
+
 <body>
+<div class="container">
 
   <div class ="header" style="background-color:#E9E9E9; position:relative">
       <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:10%; border-radius: 50%" width="100" height="100">
@@ -130,7 +124,6 @@
 
   <div id="resolveCommentModal" class="modal">
 
-    <!-- Modal content -->
     <div id="resolveCommentContent" class="modal-content"></div>
 
   </div>
@@ -153,7 +146,7 @@
 
       <div id="resRec1" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:10%;" width="100" height="100">
+        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:5%;" width="100" height="100">
 
         <label style="position:absolute; left:15%; top:25%">Why everything I don't like is horrible</label>
         <label style="position:absolute; left:15%; bottom:25%">KeyboardWarrior99</label>
@@ -167,7 +160,7 @@
 
       <div id="resRec2" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-         <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:10%;" width="100" height="100">
+         <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:5%;" width="100" height="100">
 
         <label style="position:absolute; left:15%; top:25%">Why everything I don't like is horrible</label>
         <label style="position:absolute; left:15%; bottom:25%">KeyboardWarrior99</label>
@@ -180,7 +173,7 @@
       <br>
       <div id="resRec3" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:10%;" width="100" height="100">
+        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:5%;" width="100" height="100">
 
         <label style="position:absolute; left:15%; top:25%">Why everything I don't like is horrible</label>
         <label style="position:absolute; left:15%; bottom:25%">KeyboardWarrior99</label>
@@ -194,7 +187,7 @@
 
       <div id="resRec4" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:10%;" width="100" height="100">
+        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:5%;" width="100" height="100">
 
         <label style="position:absolute; left:15%; top:25%">Why everything I don't like is horrible</label>
         <label style="position:absolute; left:15%; bottom:25%">KeyboardWarrior99</label>
@@ -210,7 +203,7 @@
 
       <div id = "resComment1" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:10%; border-radius: 50%" width="100" height="100">
+        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:5%; border-radius: 50%" width="100" height="100">
 
         <label style="position:absolute; left:15%; bottom:50%">KeyboardWarrior99</label>
         <label style="position:absolute; left:40%; bottom:50%">"offensive stuff"</label>
@@ -224,7 +217,7 @@
 
        <div id = "resComment2" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:10%; border-radius: 50%" width="100" height="100">
+        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:5%; border-radius: 50%" width="100" height="100">
 
         <label style="position:absolute; left:15%; bottom:50%">KeyboardWarrior99</label>
         <label style="position:absolute; left:40%; bottom:50%">"offensive stuff"</label>
@@ -242,7 +235,7 @@
 
        <div id="log1" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:10%; border-radius: 50%" width="100" height="100">
+        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:5%; border-radius: 50%" width="100" height="100">
 
         <label style="position:absolute; left:15%; bottom:50%">KeyboardWarrior99</label>
         <label style="position:absolute; left:40%; bottom:50%">"offensive stuff"</label>
@@ -259,7 +252,7 @@
 
       <div id="log2" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-         <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:10%;" width="100" height="100">
+         <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:5%;" width="100" height="100">
 
         <label style="position:absolute; left:15%; top:25%">Why everything I don't like is horrible</label>
         <label style="position:absolute; left:15%; bottom:25%">KeyboardWarrior99</label>
@@ -276,7 +269,7 @@
 
       <div id="log3" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:10%; border-radius: 50%" width="100" height="100">
+        <img class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:5%; border-radius: 50%" width="100" height="100">
 
         <label style="position:absolute; left:15%; bottom:50%">KeyboardWarrior99</label>
         <label style="position:absolute; left:40%; bottom:50%">"offensive stuff"</label>
@@ -293,7 +286,7 @@
 
       <div id="log4" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:10%;" width="100" height="100">
+        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:5%;" width="100" height="100">
 
         <label style="position:absolute; left:15%; top:25%">Why everything I don't like is horrible</label>
         <label style="position:absolute; left:15%; bottom:25%">KeyboardWarrior99</label>
@@ -310,7 +303,7 @@
 
       <div id="log5" style="position:relative; border-style:solid; border-width:2px; border-color:gray; height:120px;" onmouseover="this.style.background='#E9E9E9';" onmouseout="this.style.background='white';">
 
-        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:10%;" width="100" height="100">
+        <img src="/images/catfood.jpg" style="position:absolute; left:1%; top:5%;" width="100" height="100">
 
         <label style="position:absolute; left:15%; top:25%">Why everything I don't like is horrible</label>
         <label style="position:absolute; left:15%; bottom:25%">KeyboardWarrior99</label>
@@ -328,7 +321,7 @@
     </div>
 
   </div>
-
+</div>
   
 
 </body>
