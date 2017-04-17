@@ -114,32 +114,44 @@
         location.href = "Recipe";
     };
     document.getElementById("recipe2").onclick = function () {
-        location.href = "recipe2";
+        location.href = "Recipe";
     };
     document.getElementById("recipe3").onclick = function () {
-        location.href = "recipe3";
+        location.href = "Recipe";
     };
+    // document.getElementById("recipe4").onclick = function () {
+    //     location.href = "Recipe";
+    // };
+    // document.getElementById("recipe5").onclick = function () {
+    //     location.href = "Recipe";
+    // };
+    // document.getElementById("recipe6").onclick = function () {
+    //     location.href = "Recipe";
+    // };
     document.getElementById("profile").onclick = function () {
         location.href = "profile";
     };
     document.getElementById("user1").onclick = function () {
-        location.href = "user1";
+        location.href = "profile";
     };
     document.getElementById("user2").onclick = function () {
-        location.href = "user2";
+        location.href = "profile";
     };
     document.getElementById("user3").onclick = function () {
-        location.href = "user4";
+        location.href = "profile";
     };
-    document.getElementById("moderator").onclick = function () {
-        location.href = "ModeratorDashboard";
+    document.getElementById("user4").onclick = function () {
+        location.href = "profile";
     };
-    document.getElementById("preferences").onclick = function () {
-        location.href = "preferences";
-    };
-    document.getElementById("search").onclick = function () {
-        location.href = "search";
-    };
+    // document.getElementById("moderator").onclick = function () {
+    //     location.href = "moderatorDashboard";
+    // };
+    // document.getElementById("preferences").onclick = function () {
+    //     location.href = "preferences";
+    // };
+    // document.getElementById("search").onclick = function () {
+    //     location.href = "search";
+    // };
   } );
   </script>
 </head>
@@ -168,7 +180,7 @@
     
 
     <button id="createRecipe" style="position: absolute; left: 21.5%; top: 40%">Create Recipe</button>
-    <button id="moderator" class="ui-button ui-widget ui-corner-all" style="position: absolute; left: 35%; top: 40%">Moderator Dashboard</button>
+    <button id="moderator" onclick="window.location.href='/ModeratorDashboard'" class="ui-button ui-widget ui-corner-all" style="position: absolute; left: 35%; top: 40%">Moderator Dashboard</button>
   </div>
 <!-- end of header --> 
 <div id="wrapper">
@@ -203,7 +215,7 @@
       </ul>
       <div id="tabs-1">
         <div class ="filters"> 
-          <button id="preferences" class="ui-button ui-corner-all" style="float: right;">Set Preferences</button>
+          <button id="preferences" onclick="window.location.href='/preferences'" class="ui-button ui-corner-all" style="float: right;">Set Preferences</button>
         </div>
         <div class=" panel recipe" id="recipe1" style="padding-top: 5px; position: relative">
           <img src="/images/alfredo.jpeg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
@@ -243,7 +255,7 @@
       <div id="tabs-5">
         
         <div class = "filters"><h4>Your search for "Peanut Butter Pie": </h4>
-        <button id="search" class="ui-button ui-corner-all" style="float: right;">New Search</button>
+        <button id="search" onclick="window.location.href='/search'" class="ui-button ui-corner-all" style="float: right;">New Search</button>
         </div>
         <div class=" panel recipe" id="recipe6" style="padding-top: 5px; position: relative">
           <img src="/images/pbpie1.jpg" style="position:absolute; float: left" width="60" height="60">
