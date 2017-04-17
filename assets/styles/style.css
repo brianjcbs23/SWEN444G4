@@ -11,14 +11,27 @@
 #wrapper {
   display: flex;
 }
+#profile:hover {
+	cursor: pointer;
+	border: 1px solid black;
+}
 .recipe:hover{
 	background-color: #E9E9E9;
 	cursor: pointer;
+}
+.recipe{
+	height: 80px;
+}
+.filters{
+	height: 60px;
 }
 .user:hover{
 	background-color: #E9E9E9;
 	cursor: pointer;
 	vertical-align: middle;
+}
+.user{
+	height: 75px;
 }
 #left {
   float:left;

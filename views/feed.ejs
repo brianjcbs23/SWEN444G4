@@ -7,21 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <style>
-    label, input { display:block; }
-    input.text { margin-bottom:12px; width:95%; padding: .4em; }
-    fieldset { padding:0; border:0; margin-top:25px; }
-    h1 { font-size: 1.2em; margin: .6em 0; }
-    div#users-contain { width: 350px; margin: 20px 0; }
-    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
-    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
-    .ui-dialog .ui-state-error { padding: .3em; }
-    .validateTips { border: 1px solid transparent; padding: 0.3em; }
-  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  
   <script>
 
   $( function() {
@@ -118,7 +111,7 @@
     $( "#tabs" ).tabs();
     $( "#selectable" ).selectable();
     document.getElementById("recipe1").onclick = function () {
-        location.href = "recipe1";
+        location.href = "Recipe";
     };
     document.getElementById("recipe2").onclick = function () {
         location.href = "recipe2";
@@ -138,11 +131,14 @@
     document.getElementById("user3").onclick = function () {
         location.href = "user4";
     };
-    document.getElementById("log3").onclick = function () {
-        location.href = "resolveComment";
+    document.getElementById("moderator").onclick = function () {
+        location.href = "ModeratorDashboard";
     };
-    document.getElementById("log4").onclick = function () {
-        location.href = "resolveRecipe";
+    document.getElementById("preferences").onclick = function () {
+        location.href = "preferences";
+    };
+    document.getElementById("search").onclick = function () {
+        location.href = "search";
     };
   } );
   </script>
@@ -154,7 +150,6 @@
   <form>
     <fieldset>
       <label for="name">Name of Recipe</label>
-      <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
       <label for="email">Email</label>
       <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
       <label for="password">Password</label>
@@ -166,30 +161,37 @@
   </form>
 </div>
 
+<!-- Beginning of content -->
 <div class="container">
+  <div class ="header" style="position: relative;">
+      <img id="profile" class="img-circle" src="/images/longcat.jpg" style="position:absolute; left:1%; top:5%; border-radius: 50%" width="100" height="100" >
+    
 
- <div class ="header">
-
-
- <button id="profile" class="btn btn-default btn-md user" style="vertical-align: middle; border-radius: 100%">
-  <span class="glyphicon glyphicon-user" aria-hidden="true" style="position:relative; border-radius: 50%; vertical-align: middle"></span>
-</button>
- 
- <button id="createRecipe">Create Recipe</button>
- </div>
+    <button id="createRecipe" style="position: absolute; left: 21.5%; top: 40%">Create Recipe</button>
+    <button id="moderator" class="ui-button ui-widget ui-corner-all" style="position: absolute; left: 35%; top: 40%">Moderator Dashboard</button>
+  </div>
+<!-- end of header --> 
 <div id="wrapper">
   <div id="left">
-  <h3>Subscriptions</h3>
-  <p class="panel user btn btn-default btn-md" id ="user1" style="vertical-align: middle">
-  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-  BobbyFlay
-  </p>
-  <p class="user btn btn-default btn-md" id ="user2">
-  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-  AltonBrown
-  </p>
-</button>
-  </div>
+    <h3>Subscriptions</h3>
+    <div class=" panel user" id="user1" style="padding-top: 5px; position: relative">
+        <img src="/images/flay.jpg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
+        <p class="description" style="position: absolute; left: 40%; top: 38%">BobbyFlay</p>
+    </div>
+    <div class=" panel user" id="user1" style="padding-top: 5px; position: relative">
+        <img src="/images/saltguy.jpg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
+        <p class="description" style="position: absolute; left: 40%; top: 38%">SaltGuy</p>
+    </div>
+    <div class=" panel user" id="user1" style="padding-top: 5px; position: relative">
+        <img src="/images/alton.jpg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
+        <p class="description" style="position: absolute; left: 40%; top: 38%">AltonBrown</p>
+    </div>
+    <div class=" panel user" id="user1" style="padding-top: 5px; position: relative">
+        <img src="/images/kermit.jpg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
+        <p class="description" style="position: absolute; left: 40%; top: 38%">Kermit</p>
+    </div>
+  </div> <!-- End of subscriptions panel -->
+
   <div id = "right">
     <div id="tabs">
       <ul>
@@ -200,11 +202,13 @@
     	<li><a href="#tabs-5">Search</a></li>
       </ul>
       <div id="tabs-1">
-        <p class=" panel recipe" id="recipe1">
-
-        <span class="glyphicon glyphicon-cutlery btn-md"></span>
-        Fettuccine Alfredo
-        </p>
+        <div class ="filters"> 
+          <button id="preferences" class="ui-button ui-corner-all" style="float: right;">Set Preferences</button>
+        </div>
+        <div class=" panel recipe" id="recipe1" style="padding-top: 5px; position: relative">
+          <img src="/images/alfredo.jpeg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
+          <p class="description" style="position: absolute; left: 20%; top: 35%">Fettuccine Alfredo <br> AnneBurrell</p>
+        </div>
         <p class="panel recipe" id="recipe2">
         <span class="glyphicon glyphicon-cutlery btn-md"></span>
         Chicken Parmesan
@@ -215,18 +219,63 @@
         </p>
       </div>
       <div id="tabs-2">
-        <p>These are recipes from people you follow</p>
+        <div class=" panel recipe" id="recipe1" style="padding-top: 5px; position: relative">
+          <img src="/images/alfredo.jpeg" style="position:absolute; float: left" width="50" height="50">
+          <p class="description" style="position: absolute; left: 20%; top: 4.5%">Fettuccine Alfredo<br> AnneBurrell</p>
+        </div>
+        <div class=" panel recipe" id="recipe2" style="padding-top: 5px; position: relative">
+          <img src="/images/alfredo.jpeg" style="position:absolute; float: left" width="50" height="50">
+          <p class="description" style="position: absolute; left: 20%; top: 4.5%">Fettuccine Alfredo <br>AnneBurrell</p>
+        </div>
       </div>
       <div id="tabs-3">
-        <p>Favorite recipes are here</p>
+        <div class=" panel recipe" id="recipe1" style="padding-top: 5px; position: relative">
+        <img src="/images/alfredo.jpeg" style="position:absolute; float: left" width="50" height="50">
+        <p class="description" style="position: absolute; left: 20%; top: 4.5%">Fettuccine Alfredo <br> Anne Burrell</p>
+        </div>
       </div>
       <div id="tabs-4">
-        <p>Popular recipes are here</p>
+        <div class=" panel recipe" id="recipe3" style="padding-top: 5px; position: relative">
+          <img src="/images/cookie.jpg" style="position:absolute; float: left" width="50" height="50">
+          <p class="description" style="position: absolute; left: 20%; top: 4.5%">Chocolate Chip Cookies<br>BobbyFlay</p>
+        </div>
       </div>
       <div id="tabs-5">
-        <p>Search results are here</p>
+        
+        <div class = "filters"><h4>Your search for "Peanut Butter Pie": </h4>
+        <button id="search" class="ui-button ui-corner-all" style="float: right;">New Search</button>
+        </div>
+        <div class=" panel recipe" id="recipe6" style="padding-top: 5px; position: relative">
+          <img src="/images/pbpie1.jpg" style="position:absolute; float: left" width="60" height="60">
+          <p class="description" style="position: absolute; left: 20%; top: 4.5%">No-Bake Peanut Butter Pie <br>InaGarten</p>
+        </div>
+        <div class=" panel recipe" id="recipe5" style="padding-top: 5px; position: relative">
+          <img src="/images/pbpie2.jpg" style="position:absolute; float: left" width="60" height="60">
+          <p class="description" style="position: absolute; left: 20%; top: 4.5%">Grandma's Peanut Butter Pie<br>SomeDude</p>
+        </div>
       </div>
     </div>
+    <a data-toggle="modal" href="createRecipe">Open Modal</a>
+
+    <div ui-view="createRecipe" autoscroll="false"></div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a small modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
 </div>
