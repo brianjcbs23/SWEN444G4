@@ -11,12 +11,16 @@
 #wrapper {
   display: flex;
 }
+#profile:hover {
+	cursor: pointer;
+	border: 1px solid black;
+}
 .recipe:hover{
 	background-color: #E9E9E9;
 	cursor: pointer;
 }
 .recipe{
-	height: 75px;
+	height: 80px;
 }
 .filters{
 	height: 60px;
