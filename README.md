@@ -2,16 +2,11 @@
 
 a [Sails](http://sailsjs.org) application
 
-Setup Instructions :
-...
+Setup and Run Instructions :
+1. To install Sails.js
 
-URLs :
-1. http://localhost:1337/
-2. http://localhost:1337/feed
+`npm install sails -g`
 
-Annotation for URLs :
-1. Homepage
-2. The User's New Feed
-
-Known Bugs :
-...
+2. Open a command shell in the SWEN444G4 directory
+3. Run `sails lift` from the command line
+4. Navigate to `localhost:1337/feed`
