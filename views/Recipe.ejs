@@ -8,15 +8,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="jquery.barrating.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+function report(Id) {
+    var r = confirm("Are you sure?");
+    if (r == true) {
+        document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:red;";
+    }
+    else{
+        document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;"
+    }
+}
+</script>
 
 <div class="container">
 
 	<div class ="header" style="background-color:#C0D3F2; position:relative">
 	  <h2>Fettuccine Alfredo</h2>
       <p><a href="/profile">Username</a><p>
-	  <i class="material-icons" style="position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;" onmouseover="style='position:absolute; right:225px; top:50px; height:35px; width:35px; color:red;'" onmouseout="style='position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;'">report</i>
+	  <i id="report" class="material-icons" style="position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;" onclick="report(this.id)">report</i>
       <img src="/images/black_heart.png" style="position:absolute; right:200px; top:50px; height:25px; width:25px;">
-      <img src="/images/printer.png" style="position:absolute; right:165px; top:50px; height:25px; width:25px;">
+      <img src="/images/printer.png" style="position:absolute; right:165px; top:50px; height:25px; width:25px;" onclick="report(this)">
 
       <img id="exit" onclick="window.location.href='/feed'" src="/images/exitNeutral.png" onmouseover="this.src='/images/exitHover.png';" onmouseout="this.src='/images/exitNeutral.png';" style="position:absolute; Right:1%; top:10%;">
       
