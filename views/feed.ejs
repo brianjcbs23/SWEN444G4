@@ -93,9 +93,11 @@
 
     $('#createRecipeContent').load('createRecipe');
     $('#preferencesContent').load('preferences');
+    $('#searchContent').load('search');
 
     var modalCreateRecipe = document.getElementById('createRecipeModal');
     var modalPreferences = document.getElementById('preferencesModal');
+    var modalSearch = document.getElementById('searchModal');
 
     document.getElementById("createRecipe").onclick = function () {
       modalCreateRecipe.style.display = "block";
@@ -103,6 +105,10 @@
 
     document.getElementById("preferences").onclick = function () {
       modalPreferences.style.display = "block";
+    };
+
+    document.getElementById("search").onclick = function () {
+      modalSearch.style.display = "block";
     };
 
     document.getElementById("recipe1").onclick = function () {
@@ -147,7 +153,15 @@
     <!-- Modal content -->
     <div id="preferencesContent" class="modal-content"></div>
 
-  </div>
+</div>
+
+<div id="searchModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="searchContent" class="modal-content"></div>
+
+</div>
+
 <!-- Beginning of content -->
 <div class="container">
   <div class ="header" style="position: relative;">
@@ -230,7 +244,7 @@
       <div id="tabs-5">
         
         <div class = "filters"><h4>Your search for "Peanut Butter Pie": </h4>
-        <button id="search" onclick="window.location.href='/search'" class="ui-button ui-corner-all" style="float: right;">New Search</button>
+        <button id="search" class="ui-button ui-corner-all" style="float: right;">New Search</button>
         </div>
         <div class=" panel recipe" id="recipe6" style="padding-top: 5px; position: relative" onclick="window.location.href='/Recipe'">
           <img src="/images/pbpie1.jpg" style="position:absolute; float: left" width="60" height="60">
