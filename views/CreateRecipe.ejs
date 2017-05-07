@@ -44,6 +44,61 @@
     }
   </style>
 
+  <script type="text/javascript">
+    
+    var ingredient = document.getElementById("IngredientsTextArea");
+    ingredient.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+        //add(e);
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(document.getElementById("IngredientsTextArea").value);
+        node.appendChild(textnode);
+        document.getElementById("Ingredients").appendChild(node);
+        document.getElementById("ingredientList").reset();
+    }
+});
+
+
+var equipment = document.getElementById("EquipmentTextArea");
+    equipment.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+        //add(e);
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(document.getElementById("EquipmentTextArea").value);
+        node.appendChild(textnode);
+        document.getElementById("equipment").appendChild(node);
+        document.getElementById("equipmentList").reset();
+    }
+});
+
+    var directions = document.getElementById("DirectionsTextArea");
+    directions.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+        //add(e);
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(document.getElementById("DirectionsTextArea").value);
+        node.appendChild(textnode);
+        document.getElementById("directions").appendChild(node);
+        document.getElementById("directionList").reset();
+    }
+});
+    var tags= document.getElementById("TagTextArea");
+    tags.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+        //add(e);
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(document.getElementById("TagTextArea").value);
+        node.appendChild(textnode);
+        document.getElementById("tags").appendChild(node);
+        document.getElementById("tagList").reset();
+    }
+});
+function add(e) {
+    alert('Validated');
+}
+
+  </script>
+
 </head>
 
 <body>
@@ -54,20 +109,30 @@
 
 <div id="dialog-form" title="Create new Recipe" style="position:relative;">
  
-  <form>
+  
     <fieldset>
       <label for="name">Name of Recipe</label><br>
       <input type="text"><br>
       <label for="password">Description</label><br>
-      <textarea id="txtArea" rows="3" cols="20"></textarea><br>
-      <label for="password">Ingredients</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
-      <label for="password">Equipment</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
-      <label for="password">Directions</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
-      <label for="password">Description</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
+      <textarea id="txtArea" rows="3" cols="50"></textarea><br>
+      <form id="ingredientList">
+        <label for="password">Ingredients</label><br>
+        <ul id="Ingredients"></ul>
+        <textarea id="IngredientsTextArea" rows="10" cols="50"></textarea></form><br>
+      <form id="equipmentList">
+        <label for="Equipment">Equipment</label><br>
+        <ul id="equipment"></ul>
+        <textarea id="EquipmentTextArea" rows="10" cols="50"></textarea></form><br>
+      <form id="directionList">
+        <label for="password">Directions</label><br>
+        <ol id="directions"></ol>
+        <textarea id="DirectionsTextArea" rows="10" cols="50"></textarea></form>
+        <br>
+
+        <form id="tagList">
+          <label for="password">Tags</label><br>
+          <ul id="tags"></ul>
+          <textarea id="TagTextArea" rows="1" cols="10"></textarea></form><br>
 
       <button id="saveDraft" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:15.5%; bottom:1%">Save Draft</button>
       <button id="publishRecipe" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:5%; bottom:1%">Publish Recipe</button>
@@ -75,7 +140,7 @@
       <!-- Allow form submission with keyboard without duplicating the dialog button -->
       <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
     </fieldset>
-  </form>
+  
 
   
 </div>
