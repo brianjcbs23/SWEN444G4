@@ -18,6 +18,17 @@ function report(Id) {
         document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;"
     }
 }
+
+document.getElementById("favorite").onclick = function () {
+	var srcID = document.getElementById("favorite").getAttribute("src");
+
+	if(srcID.localeCompare("/images/black_heart.png") == 0){
+		document.getElementById("favorite").src = "/images/red_heart.png";
+	} else if(srcID.localeCompare("/images/red_heart.png") == 0){
+		document.getElementById("favorite").src = "/images/black_heart.png";
+	}
+
+}
 </script>
 
 <div class="container">
@@ -26,7 +37,7 @@ function report(Id) {
 	  <h2>Fettuccine Alfredo</h2>
       <p><a href="/profile">Username</a><p>
 	  <i id="report" class="material-icons" style="position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;" onclick="report(this.id)">report</i>
-      <img src="/images/black_heart.png" style="position:absolute; right:200px; top:50px; height:25px; width:25px;">
+      <img id="favorite" src="/images/black_heart.png" style="position:absolute; right:200px; top:50px; height:25px; width:25px;">
       <img src="/images/printer.png" style="position:absolute; right:165px; top:50px; height:25px; width:25px;" onclick="report(this)">
 
       <img id="exit" onclick="window.location.href='/feed'" src="/images/exitNeutral.png" onmouseover="this.src='/images/exitHover.png';" onmouseout="this.src='/images/exitNeutral.png';" style="position:absolute; Right:1%; top:10%;">
@@ -36,7 +47,7 @@ function report(Id) {
 
 	<div class="container">
 
-	  <button type="button" style="width:100px" class="ui-button ui-corner-all" data-toggle="collapse" data-target="#Description">Description</button>
+	  <button id="test" type="button" style="width:100px" class="ui-button ui-corner-all" data-toggle="collapse" data-target="#Description">Description</button>
 	  <div id="Description" class="collapse">
 	    The best pasta you've ever had. 
 	  </div>
