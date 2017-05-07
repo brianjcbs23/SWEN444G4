@@ -1,15 +1,34 @@
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+<!doctype html>
 
-td, th {
-    border: 0px;
-    text-align: justified;
-    padding: 4px;
-}
-</style>
+<head>
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 0px;
+        text-align: justified;
+        padding: 4px;
+    }
+    </style>
+
+<script>
+
+
+    document.getElementById("exit").onclick = function () {
+        location.href = "feed";
+    };
+
+</script>
+</head>
+
+<div class ="header" style="background-color:#C0D3F2; position:relative">
+      <img id="exit" onclick="window.location.href='/feed'" src="/images/exitNeutral.png" onmouseover="this.src='/images/exitHover.png';" onmouseout="this.src='/images/exitNeutral.png';" style="position:absolute; Right:1%; top:10%;">
+      
+</div>
+
 <div class="preference-page">
     <div class="title">
     <h2>Preferences</h2>

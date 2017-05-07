@@ -81,32 +81,7 @@
       return valid;
     }
  
-    dialog = $( "#dialog-form" ).dialog({
-      autoOpen: false,
-      height: 400,
-      width: 350,
-      modal: true,
-      buttons: {
-        "Save Draft": function() {
-          dialog.dialog( "close" );
-        },
-        "Create Recipe": function() {
-          dialog.dialog( "close" );
-        },
-
-
-      },
-      close: function() {
-        form[ 0 ].reset();
-        allFields.removeClass( "ui-state-error" );
-      }
-    });
- 
-    form = dialog.find( "form" ).on( "submit", function( event ) {
-      event.preventDefault();
-      addUser();
-      dialog.close();
-    });
+    
  
     $( "#createRecipe" ).button().on( "click", function() {
       dialog.dialog( "open" );
@@ -115,6 +90,21 @@
   $( function() {
     $( "#tabs" ).tabs();
     $( "#selectable" ).selectable();
+
+    $('#createRecipeContent').load('createRecipe');
+    $('#preferencesContent').load('preferences');
+
+    var modalCreateRecipe = document.getElementById('createRecipeModal');
+    var modalPreferences = document.getElementById('preferencesModal');
+
+    document.getElementById("createRecipe").onclick = function () {
+      modalCreateRecipe.style.display = "block";
+    };
+
+    document.getElementById("preferences").onclick = function () {
+      modalPreferences.style.display = "block";
+    };
+
     document.getElementById("recipe1").onclick = function () {
         location.href = "Recipe";
     };
@@ -144,29 +134,20 @@
 </head>
 <body>
 
-<div id="dialog-form" title="Create new Recipe">
- 
-  <form>
-    <fieldset>
-      <label for="name">Name of Recipe</label><br>
-      <input type="text"><br>
-      <label for="password">Description</label><br>
-      <textarea id="txtArea" rows="3" cols="20"></textarea><br>
-      <label for="password">Ingredients</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
-      <label for="password">Equipment</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
-      <label for="password">Directions</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
-      <label for="password">Description</label><br>
-      <textarea id="txtArea" rows="10" cols="50"></textarea><br>
- 
-      <!-- Allow form submission with keyboard without duplicating the dialog button -->
-      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-    </fieldset>
-  </form>
-</div>
+  <div id="createRecipeModal" class="modal">
 
+    <!-- Modal content -->
+    <div id="createRecipeContent" class="modal-content"></div>
+
+  </div>
+
+
+<div id="preferencesModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="preferencesContent" class="modal-content"></div>
+
+  </div>
 <!-- Beginning of content -->
 <div class="container">
   <div class ="header" style="position: relative;">
@@ -209,7 +190,7 @@
       </ul>
       <div id="tabs-1">
         <div class ="filters"> 
-          <button id="preferences" onclick="window.location.href='/preferences'" class="ui-button ui-corner-all" style="float: right;">Set Preferences</button>
+          <button id="preferences" class="ui-button ui-corner-all" style="float: right;">Set Preferences</button>
         </div>
         <div class=" panel recipe" id="recipe1" style="padding-top: 5px; position: relative">
           <img src="/images/alfredo.jpeg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
