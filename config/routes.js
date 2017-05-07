@@ -33,7 +33,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    view: 'Login'
   },
   '/moderatorDashboard': {
     view: 'ModeratorDashboard'
@@ -64,6 +64,18 @@ module.exports.routes = {
   },
   'get /profile': {
     view: 'profile'
+  },
+  'get /bobbyFlay': {
+    view: 'bobbyFlay'
+  },
+  'get /saltGuy': {
+    view: 'saltGuy'
+  },
+  'get /altonBrown': {
+    view: 'altonBrown'
+  },
+  'get /kermit': {
+    view: 'kermit'
   }
 
 
