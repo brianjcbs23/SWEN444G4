@@ -52,7 +52,7 @@
       
   </div>
 
-<div id="dialog-form" title="Create new Recipe">
+<div id="dialog-form" title="Create new Recipe" style="position:relative;">
  
   <form>
     <fieldset>
@@ -68,11 +68,16 @@
       <textarea id="txtArea" rows="10" cols="50"></textarea><br>
       <label for="password">Description</label><br>
       <textarea id="txtArea" rows="10" cols="50"></textarea><br>
+
+      <button id="saveDraft" style="position:absolute; right:15%; bottom:1%">Save Draft</button>
+      <button id="publishRecipe" style="position:absolute; right:5%; bottom:1%">Publish Recipe</button>
  
       <!-- Allow form submission with keyboard without duplicating the dialog button -->
       <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
     </fieldset>
   </form>
+
+  
 </div>
 
 <script>

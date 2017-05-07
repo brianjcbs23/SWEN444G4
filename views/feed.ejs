@@ -93,10 +93,12 @@
     $('#createRecipeContent').load('createRecipe');
     $('#preferencesContent').load('preferences');
     $('#searchContent').load('search');
+    $('#recipeContent').load('recipe');
 
     var modalCreateRecipe = document.getElementById('createRecipeModal');
     var modalPreferences = document.getElementById('preferencesModal');
     var modalSearch = document.getElementById('searchModal');
+    var modalRecipe = document.getElementById('recipeModal');
 
     document.getElementById("createRecipe").onclick = function () {
       modalCreateRecipe.style.display = "block";
@@ -111,13 +113,14 @@
     };
 
     document.getElementById("recipe1").onclick = function () {
-        location.href = "Recipe";
+      modalRecipe.style.display = "block";
     };
+
     document.getElementById("recipe2").onclick = function () {
-        location.href = "Recipe";
+        modalRecipe.style.display = "block";
     };
     document.getElementById("recipe3").onclick = function () {
-        location.href = "Recipe";
+        modalRecipe.style.display = "block";
     };
     document.getElementById("profile").onclick = function () {
         location.href = "profile";
@@ -139,12 +142,12 @@
 </head>
 <body>
 
-  <div id="createRecipeModal" class="modal" style=" max-height: 100%; overflow-y: auto;">
+<div id="createRecipeModal" class="modal" style=" max-height: 100%; overflow-y: auto;">
 
     <!-- Modal content -->
     <div id="createRecipeContent" class="modal-content"></div>
 
-  </div>
+</div>
 
 
 <div id="preferencesModal" class="modal" style=" max-height: 100%; overflow-y: auto;">
@@ -158,6 +161,13 @@
 
     <!-- Modal content -->
     <div id="searchContent" class="modal-content"></div>
+
+</div>
+
+<div id="recipeModal" class="modal" style=" max-height: 100%; overflow-y: auto;">
+
+    <!-- Modal content -->
+    <div id="recipeContent" class="modal-content"></div>
 
 </div>
 
