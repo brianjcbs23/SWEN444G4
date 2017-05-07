@@ -16,18 +16,19 @@
     document.getElementById("returnHome").onclick = function () {
         location.href = "feed";
     };
-  } );
-  </script>
+    document.getElementById("follow").onclick = function () {
 
-  <script>
-    function follow(s){
-        if s=="Follow"{
-            return "Unfollow";
-        }
-        else{
-            return "Follow";
-        }
-    }
+      var currentText = document.getElementById("follow").innerHTML;
+      
+      if(currentText.localeCompare("") == 0 ){
+        document.getElementById("follow").innerHTML = "Unfollow";
+      }else if(currentText.localeCompare("Unfollow") == 0){
+        document.getElementById("follow").innerHTML = "Follow";
+      }else{
+        document.getElementById("follow").innerHTML = "Unfollow";
+      }
+    };
+  } );
   </script>
 
 <style>
@@ -52,8 +53,7 @@
         <label style="position:absolute; left:250px; top:25px;">
           <p>I'm Kermit the Frog!</p>
         </label>
-        <button id="follow" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:30px; top:25px;"
-        onclick='document.getElementById("follow").innerHTML="Unfollow"'>
+        <button id="follow" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:30px; top:25px;">
             Follow
         </button>
     </div>

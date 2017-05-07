@@ -5,6 +5,19 @@
 setTimeout(function sunrise () {
   document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
 }, 0);
+
+document.getElementById("follow").onclick = function () {
+
+      var currentText = document.getElementById("follow").innerHTML;
+      
+      if(currentText.localeCompare("") == 0 ){
+        document.getElementById("follow").innerHTML = "Unfollow";
+      }else if(currentText.localeCompare("Unfollow") == 0){
+        document.getElementById("follow").innerHTML = "Follow";
+      }else{
+        document.getElementById("follow").innerHTML = "Unfollow";
+      }
+    };
 </script>
 
 <div class="default-page">
