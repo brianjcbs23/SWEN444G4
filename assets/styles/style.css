@@ -8,6 +8,10 @@
 	margin: 5px 5px 5px 5px;
 	vertical-align: middle;
 }
+.inline-headers h2, .inline-headers h4 {
+  display: inline-block;
+  vertical-align: baseline;
+}
 #wrapper {
   display: flex;
 }
