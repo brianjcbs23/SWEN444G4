@@ -35,8 +35,24 @@ document.getElementById("favorite").onclick = function () {
 </script>
 
 	<div class ="header" style="background-color:#C0D3F2; position:relative">
-	  <h2>Fettuccine Alfredo</h2>
-      <p><a href="/profile">Username</a><p>
+  <div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <div class="inline-headers">
+      
+      <a href="/anneBurrell">
+        <img src="/images/anne.jpg" style="position:relative; float: left; border-radius: 50px" width="60" height="60"><p style ="position:relative; float: left;"><span style="position:absolute; right:0px; top:55px;">AnneBurrell</a></span>
+        <h2>Fettuccine Alfredo</h2>
+        
+    </div>
+
+  </div>
+  
+</div>
+
+	  
+      
+    </div>
 	  <i id="report" class="material-icons" style="position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;" onclick="report(this.id)">report</i>
       <img id="favorite" src="/images/black_heart.png" style="position:absolute; right:200px; top:50px; height:25px; width:25px;">
       <img src="/images/printer.png" style="position:absolute; right:165px; top:50px; height:25px; width:25px;" onclick="report(this)">
@@ -44,7 +60,7 @@ document.getElementById("favorite").onclick = function () {
       <img id="exit" onclick="window.location.href='/feed'" src="/images/exitNeutral.png" onmouseover="this.src='/images/exitHover.png';" onmouseout="this.src='/images/exitNeutral.png';" style="position:absolute; Right:1%; top:10%;">
       
 	</div>
-<div class="container">
+<div id="containers">
 	<button type="button" style="width:100px" class="ui-button ui-widget ui-corner-all" data-toggle="collapse" data-target="#Description">Description</button>
     <div id="Description" class="collapse in">
       The best pasta you've ever had. 

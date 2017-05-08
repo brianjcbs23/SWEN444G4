@@ -65,6 +65,9 @@ module.exports.routes = {
   'get /profile': {
     view: 'profile'
   },
+  'get /anneBurrell': {
+    view: 'anneBurrell'
+  },
   'get /bobbyFlay': {
     view: 'bobbyFlay'
   },
