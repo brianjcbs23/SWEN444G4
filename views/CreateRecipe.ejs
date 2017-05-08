@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+<link rel="shortcut icon" href="//jqueryui.com/jquery-wp-content/themes/jqueryui.com/i/favicon.ico">
+
+  <link rel="stylesheet" href="//jqueryui.com/jquery-wp-content/themes/jquery/css/base.css?v=1">
+  <link rel="stylesheet" href="//jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
+
+  <script src="//jqueryui.com/jquery-wp-content/themes/jquery/js/modernizr.custom.2.8.3.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+  <script src="//jqueryui.com/jquery-wp-content/themes/jquery/js/plugins.js"></script>
+  <script src="//jqueryui.com/jquery-wp-content/themes/jquery/js/main.js"></script>
+
+  <script src="//use.typekit.net/wde1aof.js"></script>
 
   <style>
     /* The Modal (background) */
@@ -97,12 +110,18 @@ function add(e) {
     alert('Validated');
 }
 
+$( function() {
+    var spinner = $( "#spinner" ).spinner();
+ 
+    $( "button" ).button();
+  } );
   </script>
 
 </head>
 
 <body>
   <div class ="header" style="background-color:#C0D3F2; position:relative">
+  <h2>Create Recipe</h2>
       <img id="exit" src="/images/exitNeutral.png" onmouseover="this.src='/images/exitHover.png';" onmouseout="this.src='/images/exitNeutral.png';" style="position:absolute; Right:1%; top:10%;">
       
   </div>
@@ -133,6 +152,25 @@ function add(e) {
           <label for="password">Tags</label><br>
           <ul id="tags"></ul>
           <textarea id="TagTextArea" rows="1" cols="10"></textarea></form><br>
+
+        <label>Total Time</label><br>
+        <input type="radio"> &lt15 min <br>
+        <input type="radio"> 15-30 min <br>
+        <input type="radio"> 30-45 min<br>
+        <input type="radio"> &gt45 min <br>
+        <br><br>
+
+
+        <p>
+  <label for="spinner">Number of servings:</label><br>
+  <input id="spinner" name="value">
+</p><br>
+    <label>Total Cost:</label> <br>
+    <input type="radio"> &lt$5 <br>
+    <input type="radio"> $5-10 <br>
+    <input type="radio"> &gt$10 <br>
+
+
 
       <button id="saveDraft" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:15.5%; bottom:1%">Save Draft</button>
       <button id="publishRecipe" class="ui-button ui-widget ui-corner-all" style="position:absolute; right:5%; bottom:1%">Publish Recipe</button>

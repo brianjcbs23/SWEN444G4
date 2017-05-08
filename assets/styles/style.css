@@ -34,6 +34,9 @@
 	cursor: pointer;
 	vertical-align: middle;
 }
+.icon:hover{
+	cursor: pointer;
+}
 .user{
 	height: 75px;
 }
