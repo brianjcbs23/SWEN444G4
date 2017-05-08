@@ -13,7 +13,7 @@
 <script>
 
 function report(Id) {
-    var r = confirm("Are you sure?");
+    var r = confirm("Are you sure you want to report this recipe?");
     if (r == true) {
         document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:red;";
     }
@@ -21,15 +21,21 @@ function report(Id) {
         document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;"
     }
 }
+
 function reportcomment(Id) {
-    var r = confirm("Are you sure?");
+     var r = confirm("Are you sure you want to report this comment?");
+}
+
+function print(Id) {
+    var r = confirm("View print preview of recipe?");
     if (r == true) {
-        document.getElementById(Id).style = "position:absolute; right:0px; top:10px; height:35px; width:35px; color:red;";
+        document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:red;";
     }
     else{
-        document.getElementById(Id).style = "position:absolute; right:0px; top:10px; height:35px; width:35px; color:black;"
+        document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;"
     }
 }
+
 document.getElementById("favorite").onclick = function () {
 	var srcID = document.getElementById("favorite").getAttribute("src");
 
@@ -61,11 +67,11 @@ document.getElementById("favorite").onclick = function () {
 	  
       
     </div>
-	  <i id="report" class="material-icons" style="position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;" onclick="report(this.id)">report</i>
-      <img id="favorite" src="/images/black_heart.png" style="position:absolute; right:200px; top:50px; height:25px; width:25px;">
-      <img src="/images/printer.png" style="position:absolute; right:165px; top:50px; height:25px; width:25px;" onclick="report(this)">
+	  <i id="report" class="material-icons icon" style="position:absolute; right:225px; top:50px; height:35px; width:35px; color:black;" onclick="report(this.id)">report</i>
+      <img class = "icon" id="favorite" src="/images/black_heart.png" style="position:absolute; right:200px; top:50px; height:25px; width:25px;">
+      <img class="icon" src="/images/printer.png" style="position:absolute; right:165px; top:50px; height:25px; width:25px;" onclick="print(this)">
 
-      <img id="exit" onclick="window.location.href='/feed'" src="/images/exitNeutral.png" onmouseover="this.src='/images/exitHover.png';" onmouseout="this.src='/images/exitNeutral.png';" style="position:absolute; Right:1%; top:10%;">
+      <img  class="icon" id="exit" onclick="window.location.href='/feed'" src="/images/exitNeutral.png" onmouseover="this.src='/images/exitHover.png';" onmouseout="this.src='/images/exitNeutral.png';" style="position:absolute; Right:1%; top:10%;">
       
 	</div>
 <div id="containers">
@@ -107,7 +113,7 @@ document.getElementById("favorite").onclick = function () {
     <div id="comments" class="collapse in">
       <div class="panel user" id="user1" style="padding-top: 5px; position: relative">
         <img src="/images/saltguy.jpg" style="position:absolute; float: left; border-radius: 50px" width="60" height="60">
-        <p class="description" style="position: absolute; left: 20%; top: 38%">This recipe tastes worse than my grandmother's ashes. Needs salt.</p>
+        <p class="description" style="position: absolute; left: 40%; top: 38%">This recipe tastes worse than my grandmother's ashes. Needs salt. </p>
         <i id="reportcomment" class="material-icons" style="position:absolute; right:0px; top:10px; height:35px; width:35px; color:black;" onclick="reportcomment(this.id)">report</i>
       </div>
    </div>
