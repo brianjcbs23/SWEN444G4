@@ -7,6 +7,7 @@ Student Chef is a recipe-sharing web application designed with the hungry colleg
 ## Using the Application
 1. Navigate to the [Student Chef](http://student-chef.herokuapp.com/) application. 
 2. Log in using any username and password. 
+3. From the dashboard, view feeds, recipes and user profiles. 
 
 
 ### Supported Features
