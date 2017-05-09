@@ -9,8 +9,8 @@
 <script>
 
 function report(Id) {
-    var r = confirm("Are you sure you want to report this recipe?");
-    if (r == true) {
+    var r = prompt("Are you sure you want to report this recipe?\nReason:", "");
+    if (r != null && r != "") {
         document.getElementById(Id).style = "position:absolute; right:225px; top:50px; height:35px; width:35px; color:red;";
     }
     else{
@@ -19,8 +19,8 @@ function report(Id) {
 }
 
 function reportcomment(Id) {
-     var r = confirm("Are you sure you want to report this comment?");
-     if (r == true) {
+     var r = prompt("Are you sure you want to report this comment?\nReason:", "");
+     if (r != null && r != "") {
         document.getElementById(Id).style = "position:absolute; right:0px; top:10px; height:35px; width:35px; color:red;";
     }
     else{
